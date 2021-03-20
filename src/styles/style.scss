@@ -1,3 +1,20 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+$title_font: 'Playfair Display', serif;
+$main_font: 'Quicksand', sans-serif;
+
+/* Colors */
+$background_color: #f2f3f7;
+$font_color: #333333;
+$color_blue: rgb(115, 115, 214);
+
+/* Wrap */
+$wrap: 1200px;
+
+/* Style */
+
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +24,10 @@
 body{
   width: 100%;
   min-height: 100vh;
+  font-family: $main_font;
+  color: $font_color;
 }
+
 
 .nav__tab{
   position: fixed;
@@ -15,4 +35,94 @@ body{
   left: 0;
   width: 25%;
   height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: $background_color;
+  text-align: center;
+  .profile{
+    img{
+      width: 225px;
+      height: 225px;
+      border-radius: 100%;
+    }
+    h3{
+      font-size: 28px;
+    }
+    p{
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }
+  .links{
+    height: 100%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    a{
+      font-size: 22px;
+    }
+  }
+}
+
+
+
+
+/* Above the fold */
+h1, h2, h3, h4, h5, h6{
+  font-family: $title_font;
+}
+
+h1, h2, h3{
+  margin: 15px 0;
+}
+
+h4, h5, h6{
+  margin: 10px 0;
+}
+
+.nav__tab, main{
+  padding: 20px 10px;
+}
+
+ul{
+  li{
+    list-style-type: none;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: $font_color;
+}
+
+a.anim{
+  position: relative;
+  padding-bottom: 5px;
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px $color_blue solid;
+    transition: all 0.5s ease;
+    width: 0;
+  }
+  &:hover{
+    color: $color_blue;
+    &::before{
+      transition: all 0.5s ease;
+      width: 100%;
+    }
+  }
+}
+
+.wrap{
+  max-width: $wrap;
+  section{
+    padding: 50px 25px;
+  }
 }
