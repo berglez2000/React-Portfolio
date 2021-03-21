@@ -61,6 +61,20 @@ body{
       font-weight: lighter;
     }
   }
+  .social__links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    a{
+      margin: 5px;
+      padding: 5px 10px;
+      i{
+        font-size: 28px;
+      }
+    }
+  }
   .links{
     height: 100%;
     padding: 30px 0;
@@ -69,7 +83,8 @@ body{
     align-items: center;
     justify-content: space-evenly;
     a{
-      font-size: 22px;
+      font-size: 18px;
+      text-transform: uppercase;
     }
   }
 }
@@ -160,6 +175,17 @@ body{
       }
     }
   }
+  #skills{
+    .content{
+      .progress__field{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+      }
+    }
+  }
 }
 
 
@@ -179,7 +205,7 @@ h4, h5, h6{
 }
 
 .nav__tab{
-  padding: 20px 10px;
+  padding: 50px 10px;
 }
 
 ul{

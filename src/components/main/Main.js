@@ -1,5 +1,7 @@
 import About from "./about/About"
 import Home from "./home/Home"
+import Projects from "./projects/Projects"
+import Skills from "./skills/Skills"
 
 const Main = () => {
   return (
@@ -7,6 +9,8 @@ const Main = () => {
       <div className="wrap">
         <Home />
         <About />
+        <Skills />
+        <Projects />
       </div>
     </main>
   )

@@ -61,6 +61,29 @@ body {
   font-weight: lighter;
 }
 
+.nav__tab .social__links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.nav__tab .social__links a {
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.nav__tab .social__links a i {
+  font-size: 28px;
+}
+
 .nav__tab .links {
   height: 100%;
   padding: 30px 0;
@@ -80,7 +103,8 @@ body {
 }
 
 .nav__tab .links a {
-  font-size: 22px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 #main {
@@ -222,6 +246,20 @@ body {
   cursor: pointer;
 }
 
+#main #skills .content .progress__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 /* Above the fold */
 h1, h2, h3, h4, h5, h6, strong {
   font-family: "Playfair Display", serif;
@@ -236,7 +274,7 @@ h4, h5, h6 {
 }
 
 .nav__tab {
-  padding: 20px 10px;
+  padding: 50px 10px;
 }
 
 ul li {
