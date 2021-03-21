@@ -9,6 +9,7 @@ $main_font: 'Quicksand', sans-serif;
 $background_color: #f2f3f7;
 $font_color: #333333;
 $color_blue: rgb(115, 115, 214);
+$color_grey: grey;
 
 /* Wrap */
 $wrap: 1200px;
@@ -19,6 +20,11 @@ $wrap: 1200px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -36,7 +42,7 @@ body{
   width: 25%;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   background-color: $background_color;
@@ -68,11 +74,99 @@ body{
   }
 }
 
+#main{
+  width: 75%;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  left: 25%;
+  #home{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .about{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      width: 60%;
+      strong{
+        padding: 50px 0;
+        font-size: 3rem;
+      }
+      p{
+        padding: 35px 0;
+        font-size: 2rem;
+        font-family: $title_font;
+      }
+      a{
+        margin: 20px 0;
+      }
+    }
+    img{
+      width: 40%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  #about{
+    .content{
+      width: 100%;
+      .about__me{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+        p{
+          max-width: 70ch;
+          text-align: center;
+        }
+      }
+      .cards__field{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px 0;
+        .card{
+          width: 125px;
+          height: 125px;
+          border: 1px rgb(238, 238, 238) solid;
+          box-shadow: 5px 5px 5px rgb(238, 238, 238);
+          border-radius: 3px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          margin: 20px;
+          transition: all 0.3s ease-in-out;
+          i{
+            font-size: 28px;
+          }
+          p{
+            font-size: 15px;
+          }
+          &:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.075);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 
 /* Above the fold */
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, strong{
   font-family: $title_font;
 }
 
@@ -84,7 +178,7 @@ h4, h5, h6{
   margin: 10px 0;
 }
 
-.nav__tab, main{
+.nav__tab{
   padding: 20px 10px;
 }
 
@@ -124,5 +218,45 @@ a.anim{
   max-width: $wrap;
   section{
     padding: 50px 25px;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 80vh;
+    }
+  }
+  #home{
+    flex-direction: row;
+  }
+}
+
+a.btn{
+  padding: 6px 15px;
+  border-radius: 4px;
+  border: 1px $font_color solid;
+  transition: all 0.4s ease;
+  &:hover{
+    transition: all 0.4s ease;
+    background-color: $font_color;
+    color: #fff;
+  }
+}
+
+.title__div{
+  h6{
+    font-size: 12px;
+    font-family: $main_font;
+    color: $color_grey;
+  }
+  h2{
+    font-size: 28px;
+  }
+  h6, h2{
+    text-transform: uppercase;
   }
 }

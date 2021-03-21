@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 const Profile = ({ img, name, position }) => {
   return (

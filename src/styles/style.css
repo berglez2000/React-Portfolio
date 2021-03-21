@@ -11,6 +11,11 @@
           box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -27,9 +32,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -78,8 +83,147 @@ body {
   font-size: 22px;
 }
 
+#main {
+  width: 75%;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+
+#main #home {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#main #home .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+}
+
+#main #home .about strong {
+  padding: 50px 0;
+  font-size: 3rem;
+}
+
+#main #home .about p {
+  padding: 35px 0;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+#main #home .about a {
+  margin: 20px 0;
+}
+
+#main #home img {
+  width: 40%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#main #about .content {
+  width: 100%;
+}
+
+#main #about .content .about__me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#main #about .content .about__me p {
+  max-width: 70ch;
+  text-align: center;
+}
+
+#main #about .content .cards__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#main #about .content .cards__field .card {
+  width: 125px;
+  height: 125px;
+  border: 1px #eeeeee solid;
+  -webkit-box-shadow: 5px 5px 5px #eeeeee;
+          box-shadow: 5px 5px 5px #eeeeee;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#main #about .content .cards__field .card i {
+  font-size: 28px;
+}
+
+#main #about .content .cards__field .card p {
+  font-size: 15px;
+}
+
+#main #about .content .cards__field .card:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);
+  cursor: pointer;
+}
+
 /* Above the fold */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, strong {
   font-family: "Playfair Display", serif;
 }
 
@@ -91,7 +235,7 @@ h4, h5, h6 {
   margin: 10px 0;
 }
 
-.nav__tab, main {
+.nav__tab {
   padding: 20px 10px;
 }
 
@@ -136,5 +280,67 @@ a.anim:hover::before {
 
 .wrap section {
   padding: 50px 25px;
+  min-height: 100vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+}
+
+.wrap #home {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+a.btn {
+  padding: 6px 15px;
+  border-radius: 4px;
+  border: 1px #333333 solid;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+a.btn:hover {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: #333333;
+  color: #fff;
+}
+
+.title__div h6 {
+  font-size: 12px;
+  font-family: "Quicksand", sans-serif;
+  color: grey;
+}
+
+.title__div h2 {
+  font-size: 28px;
+}
+
+.title__div h6, .title__div h2 {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
